@@ -31,9 +31,8 @@ export default class CoinListComponent implements OnInit, AfterViewInit {
   private CurrencyService = inject(CurrencyService);
 
   ngOnInit(): void {
-
-    this.getBannerData();
     this.getAllData();
+    this.getBannerData();
 
     this.CurrencyService.getCurrency().subscribe({
       next: (res) => {
